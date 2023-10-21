@@ -42,26 +42,31 @@ require('mason-lspconfig').setup({
         capabilities = capabilities,
       }
     end,
+    gopls = function()
+      require'lspconfig'.gopls.setup {
+        settings = {
+          gopls = {
+            gofumpt = true,
+            staticcheck = true,
+            analyses = {
+              unusedparams = true,
+            }
+          },
+        }
+      }
+    end,
   }
 })
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
-
+,
 cmp.setup({
-  snippet = {
-    expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-      end,
-  },
   sources = {
     {name = 'path'},
     {name = 'nvim_lsp'},
     {name = 'nvim_lua'},
-    {name = 'codeium', keyword_length = 3}, 
+    {name = 'codeium'}, 
   },
   window = {
     completion = cmp.config.window.bordered(),

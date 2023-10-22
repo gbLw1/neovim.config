@@ -14,17 +14,19 @@ autocmd("BufWinEnter", {
         local bufnr = vim.api.nvim_get_current_buf()
         local opts = { buffer = bufnr, remap = false }
         -- TODO: add desc to opts at each keymap
+        opts.desc = '[G]it [p]ush'
         vim.keymap.set("n", "<leader>gp", function()
             vim.cmd.Git('push')
         end, opts)
 
-        -- rebase always
+        opts.desc = '[G]it [P]ull'
         vim.keymap.set("n", "<leader>gP", function()
             vim.cmd.Git({ 'pull' })
         end, opts)
 
         -- NOTE: It allows me to easily set the branch i am pushing and any tracking
         -- needed if i did not set the branch up correctly
+        opts.desc = 'Push [T]o [branch]'
         vim.keymap.set("n", "<leader>gt", ":Git push -u origin ", opts);
     end,
 })

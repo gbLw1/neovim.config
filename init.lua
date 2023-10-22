@@ -483,7 +483,6 @@ local servers = {
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
   csharp_ls = {},
-  intelephense = {},
 
   lua_ls = {
     Lua = {

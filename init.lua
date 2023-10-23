@@ -481,7 +481,17 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs', 'tsx', 'jsx' } },
+  html = {
+    filetypes = {
+      "html",
+      "javascript",
+      "javascriptreact",
+      "javascript.jsx",
+      "typescript",
+      "typescriptreact",
+      "typescript.tsx",
+    }
+  },
   csharp_ls = {},
 
   lua_ls = {

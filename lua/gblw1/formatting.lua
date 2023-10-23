@@ -23,12 +23,12 @@ return {
 			},
 		})
 
-		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+		vim.keymap.set({ "n", "v" }, "<leader>f", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 500,
 			})
-		end, { desc = "Format file" })
+		end, { desc = "[F]ormat file with LSP / Formatters" })
 	end,
 }

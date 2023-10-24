@@ -12,7 +12,7 @@ vim.keymap.set("n", "<C-b>", "<C-b>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- allow pasting without losing the current buffer
+-- allow pasting without losing the current paste register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland

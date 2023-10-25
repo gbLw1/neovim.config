@@ -515,6 +515,7 @@ local servers = {
 		},
 	},
 	csharp_ls = {},
+	intelephense = {},
 
 	lua_ls = {
 		Lua = {

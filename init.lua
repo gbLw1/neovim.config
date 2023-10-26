@@ -131,9 +131,9 @@ require("lazy").setup({
 			on_attach = function(bufnr)
 				vim.keymap.set(
 					"n",
-					"<leader>hp",
+					"<leader>gh",
 					require("gitsigns").preview_hunk,
-					{ buffer = bufnr, desc = "Preview git hunk" }
+					{ buffer = bufnr, desc = "Preview [G]it [h]unk" }
 				)
 
 				-- don't override the built-in and fugitive keymaps
@@ -456,8 +456,8 @@ local on_attach = function(_, bufnr)
 	nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 
 	-- See `:help K` for why this keymap
-	nmap("K", vim.lsp.buf.hover, "Hover Documentation")
-	nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
+	nmap("<leader>ch", vim.lsp.buf.hover, "[C]ode [H]over Documentation")
+	nmap("<leader>cs", vim.lsp.buf.signature_help, "[C]ode [S]ignature Documentation")
 
 	-- Lesser used LSP functionality
 	nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
@@ -478,7 +478,6 @@ require("which-key").register({
 	["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
 	["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
 	["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
-	["<leader>h"] = { name = "More git", _ = "which_key_ignore" },
 	["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
 	["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
 	["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },

@@ -242,6 +242,8 @@ require("lazy").setup({
 	-- { import = 'custom.plugins' },
 }, {})
 
+vim.g.copilot_filetypes = { markdown = true }
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!

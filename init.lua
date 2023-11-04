@@ -245,7 +245,6 @@ require("lazy").setup({
 }, {})
 
 vim.g.copilot_filetypes = {
-	-- enable copilot in every filetype
 	["*"] = true,
 }
 

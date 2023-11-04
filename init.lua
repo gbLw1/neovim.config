@@ -578,7 +578,52 @@ local luasnip = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load()
 luasnip.config.setup({})
 
+local border = {
+	{ "┏", "FloatBorder" },
+	{ "━", "FloatBorder" },
+	{ "┓", "FloatBorder" },
+	{ "┃", "FloatBorder" },
+	{ "┛", "FloatBorder" },
+	{ "━", "FloatBorder" },
+	{ "┗", "FloatBorder" },
+	{ "┃", "FloatBorder" },
+}
+
+-- local border = {
+-- 	{ "╔", "FloatBorder" },
+-- 	{ "═", "FloatBorder" },
+-- 	{ "╗", "FloatBorder" },
+-- 	{ "║", "FloatBorder" },
+-- 	{ "╝", "FloatBorder" },
+-- 	{ "═", "FloatBorder" },
+-- 	{ "╚", "FloatBorder" },
+-- 	{ "║", "FloatBorder" },
+-- }
+
+-- local border = {
+-- 	{ "╭", "CmpBorder" },
+-- 	{ "─", "CmpBorder" },
+-- 	{ "╮", "CmpBorder" },
+-- 	{ "│", "CmpBorder" },
+-- 	{ "╯", "CmpBorder" },
+-- 	{ "─", "CmpBorder" },
+-- 	{ "╰", "CmpBorder" },
+-- 	{ "│", "CmpBorder" },
+-- }
+
 cmp.setup({
+	-- configure nice looking window
+	window = {
+		completion = cmp.config.window.bordered({
+			-- border = "double",
+			-- border = "rounded",
+			border = border,
+			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+		}),
+		documentation = cmp.config.window.bordered({
+			border = "rounded",
+		}),
+	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)

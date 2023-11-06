@@ -24,14 +24,15 @@ Also some nice [keymaps](./after/plugin/remap.lua) and [buffer settings](./after
 
 Just clone the repository at your neovim directory
 
-```bash
-git clone https://github.com/gbLw1/neovim.config.git
-```
-
 ### Linux
 
-`~/.config/nvim/`
+```bash
+git clone https://github.com/gbLw1/neovim.config.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+```
 
-### Windows
+### Windows (pwsh)
 
-`~/%userprofile%/AppData/Local/nvim/`
+```pwsh
+git clone https://github.com/gbLw1/neovim.config.git "$env:LOCALAPPDATA/nvim"
+```
+

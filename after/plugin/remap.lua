@@ -44,3 +44,9 @@ vim.keymap.set(
 	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 	{ desc = "[R]eplace [S]tring" }
 )
+
+-- vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", {
+-- 	noremap = true,
+-- 	silent = true,
+-- 	desc = "Omni completion",
+-- })

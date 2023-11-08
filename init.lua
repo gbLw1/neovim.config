@@ -519,7 +519,8 @@ local servers = {
 			"typescript.tsx",
 		},
 	},
-	csharp_ls = {},
+	-- csharp_ls = {},
+	omnisharp = {},
 	intelephense = {},
 
 	lua_ls = {

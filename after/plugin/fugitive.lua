@@ -13,7 +13,12 @@ autocmd("BufWinEnter", {
 
 		local bufnr = vim.api.nvim_get_current_buf()
 		local opts = { buffer = bufnr, remap = false }
-		-- TODO: add desc to opts at each keymap
+
+		opts.desc = "[G]it commit --amend --[N]o-edit"
+		vim.keymap.set("n", "<leader>gn", function()
+			vim.cmd.Git("commit --amend --no-edit")
+		end, opts)
+
 		opts.desc = "[G]it [p]ush"
 		vim.keymap.set("n", "<leader>gp", function()
 			vim.cmd.Git("push")

@@ -17,6 +17,7 @@ This is my configuration for neovim that I use for development.
 - [x] Mason - Package manager (LSP / linting / formatter)
 - [x] Onedark.nvim - color scheme
 - [x] Neodev - signature helper
+- [x] Colorizer.lua - color codes
 
 Also some nice [keymaps](./after/plugin/remap.lua) and [buffer settings](./after/plugin/opt.lua) that you can edit.
 

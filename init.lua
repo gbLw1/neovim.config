@@ -160,14 +160,14 @@ require("lazy").setup({
 		},
 	},
 
-	-- {
-	-- 	-- Theme inspired by Atom
-	-- 	"navarasu/onedark.nvim",
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		vim.cmd.colorscheme("onedark")
-	-- 	end,
-	-- },
+	{
+		-- Theme inspired by Atom
+		"navarasu/onedark.nvim",
+		-- priority = 1000,
+		-- config = function()
+		-- 	vim.cmd.colorscheme("onedark")
+		-- end,
+	},
 
 	{
 		"rose-pine/neovim",
@@ -200,6 +200,14 @@ require("lazy").setup({
 		-- See `:help ibl`
 		main = "ibl",
 		opts = {},
+	},
+
+	{
+		"norcalli/nvim-colorizer.lua",
+		event = "BufRead",
+		config = function()
+			require("colorizer").setup()
+		end,
 	},
 
 	-- "gc" to comment visual regions/lines

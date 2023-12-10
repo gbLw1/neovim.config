@@ -540,6 +540,7 @@ local servers = {
 	-- csharp_ls = {},
 	omnisharp = {},
 	intelephense = {},
+	clangd = {},
 
 	lua_ls = {
 		Lua = {

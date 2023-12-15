@@ -16,11 +16,11 @@ return {
 				lua = { "stylua" },
 				go = { "gofumpt", "goimports", "goimports-reviser", "golines" },
 			},
-			format_on_save = {
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 500,
-			},
+			-- format_on_save = {
+			-- 	lsp_fallback = true,
+			-- 	async = false,
+			-- 	timeout_ms = 500,
+			-- },
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()

@@ -50,3 +50,6 @@ vim.keymap.set(
 -- 	silent = true,
 -- 	desc = "Omni completion",
 -- })
+
+vim.keymap.set("n", "<leader>gdf", "<cmd>diffget //2<CR>", { desc = "Select left side of git diff changes" })
+vim.keymap.set("n", "<leader>gdj", "<cmd>diffget //3<CR>", { desc = "Select right side of git diff changes" })

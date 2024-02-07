@@ -173,9 +173,9 @@ require("lazy").setup({
 		"folke/tokyonight.nvim",
 		priority = 1000,
 		opts = {},
-    config = function()
-      vim.cmd.colorscheme("tokyonight-night")
-    end,
+		config = function()
+			vim.cmd.colorscheme("tokyonight-night")
+		end,
 	},
 
 	-- {
@@ -194,7 +194,7 @@ require("lazy").setup({
 		opts = {
 			options = {
 				icons_enabled = false,
-				theme = "tokyionight-night",
+				theme = "tokyonight",
 				-- theme = "onedark",
 				-- theme = "rose-pine",
 				component_separators = "|",

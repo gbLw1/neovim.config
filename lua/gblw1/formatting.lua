@@ -27,7 +27,7 @@ return {
 			conform.format({
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 500,
+				timeout_ms = 5e3,
 			})
 		end, { desc = "[F]ormat file with LSP / Formatters" })
 	end,

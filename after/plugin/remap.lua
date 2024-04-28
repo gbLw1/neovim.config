@@ -32,7 +32,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- apply changes in visual block selection
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set("n", "<leader>t", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>t", "<cmd>silent !tmux new tmux-sessionizer<CR>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- replace remap with autoformatting file

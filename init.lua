@@ -209,7 +209,8 @@ require('lazy').setup({
         build = ':TSUpdate',
     },
 
-    'nvim-treesitter/nvim-treesitter-context',
+    -- highlight the current code context
+    -- 'nvim-treesitter/nvim-treesitter-context',
 
     {
         'ThePrimeagen/vim-be-good',

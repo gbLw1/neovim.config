@@ -31,6 +31,17 @@ require('lazy').setup({
 
     'github/copilot.vim',
 
+    {
+        'OmniSharp/omnisharp-vim',
+        dependencies = {
+            'puremourning/vimspector',
+        },
+        config = function()
+            vim.g.OmniSharp_server_use_net6 = 1
+            -- require('vimspector').setup {}
+        end,
+    },
+
     -- Git related plugins
     'rbong/vim-flog',
     'tpope/vim-fugitive',

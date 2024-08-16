@@ -15,6 +15,7 @@ return {
 				json = { "prettier" },
 				lua = { "stylua" },
 				go = { "gofumpt", "goimports", "goimports-reviser", "golines" },
+                python = { "black" },
 			},
 			-- format_on_save = {
 			-- 	lsp_fallback = true,

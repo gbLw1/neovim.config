@@ -11,6 +11,7 @@ return {
 			typescriptreact = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			go = { "golangcilint" },
+            python = { "flake8" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear })

@@ -241,7 +241,7 @@ require('lazy').setup({
     },
 
     {
-       'folke/trouble.nvim',
+        'folke/trouble.nvim',
         opts = {}, -- for default options, refer to the configuration section for custom setup.
         cmd = 'Trouble',
         keys = {
@@ -564,7 +564,8 @@ require('mason-lspconfig').setup()
 local servers = {
     -- clangd = {},
     gopls = {},
-    jedi_language_server = {},
+    -- jedi_language_server = {},
+    pyright = {},
     -- rust_analyzer = {},
     tsserver = {},
     html = {
@@ -623,6 +624,7 @@ mason_tool_instaler.setup({
         -- linters
         'eslint_d',
         'golangci-lint',
+        'mypy',
 
         -- formatters
         'prettier',
@@ -631,6 +633,7 @@ mason_tool_instaler.setup({
         'goimports',
         'goimports-reviser',
         'golines',
+        'black', -- python
     },
 })
 
